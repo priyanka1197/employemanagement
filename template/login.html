@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+</head>
+<body>
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<form method="POST">
+        {% csrf_token %}
+				<div class="form-group row">  
+        <label class="col-sm-4 col-form-label"></label>  
+        <h3>Log In</h3>  
+                 </div>  
+                              {{form.as_p}}
+				<div class="container-login100-form-btn">
+					<button class="login100-form-btn">
+						Sign In
+					</button>
+				</div>
+
+				<div class="text-center">
+					<a href="/register " class="txt2 hov1">
+						Sign Up
+					</a>
+				</div>
+			</form>
+
+			
+		</div>
+	</div>
+</body>
+</html>
+{% endblock %}
